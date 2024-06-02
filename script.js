@@ -15,11 +15,13 @@ function func(data1) {
         var { name, capital, region, latlng, cca2, flags } = data1[i];
         console.log(name, capital, region, latlng, cca2, flags);
         col.innerHTML = `
-        <div class="card text-white bg-primary mb-3" style="max-width: 18rem;">
-                <div class="card-header text-center"><h1>${name.common}</h1></div>
+        <div class="card text-white bg-info mb-3" style="max-width: 18rem; min-height: 23rem;">
+                <div class="card-header text-center "><h5>${name.common}</h5></div>
                 <div class="card-body text-center">
-                    
-                    <img src="${flags.png}" alt="Flag of ${name.common}" style="width:100%; height:auto;">
+                <div style="text-align: center;">
+                <img src="${flags.png}" alt="Flag of ${name.common}" style="width: 200px; height: 100px; object-fit: cover;">
+            </div>
+                  
                     <p class="card-text">Capital: ${capital ? capital[0] : "N/A"}</p>
                     <p class="card-text">Region: ${region}</p>
                     <p class="card-text">Country Code: ${cca2}</p>
